@@ -1,0 +1,36 @@
+# Local runtime, dependencies, and process state
+.venv/
+venv/
+.deps/
+.runtime/
+__pycache__/
+*.py[cod]
+*.log
+*.jsonl
+.hook.pid
+.stop-hook
+
+# Installers, extracted proprietary files, and local research
+workspace/
+*.exe
+*.dll
+*.msi
+*.7z
+*.zip
+*-disasm.txt
+
+# Tool caches, local settings, and packaging output
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.env
+.env.*
+.vscode/
+.idea/
+build/
+dist/
+*.egg-info/
+Thumbs.db
+Desktop.ini
+.DS_Store
