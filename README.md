@@ -50,7 +50,23 @@
 .\Stop-QualityHook.ps1
 ```
 
-后台控制器运行期间，会在客户端重启后重新识别并加载 Hook。电脑重启后需再次执行启动脚本。停止 Hook 会恢复后续能力查询的原逻辑，已选画质不会被脚本主动切回高清。
+后台控制器运行期间，会在客户端重启后重新识别并加载 Hook。停止 Hook 会恢复后续能力查询的原逻辑，已选画质不会被脚本主动切回高清。
+
+### 开机自启
+
+启用后，每次登录当前 Windows 账号都会在后台自动启动补丁，UU远程打开后自动加载 Hook：
+
+```powershell
+.\Start-QualityHook.ps1 -EnableAutostart
+```
+
+取消自启：
+
+```powershell
+.\Start-QualityHook.ps1 -DisableAutostart
+```
+
+取消自启只影响下次登录；要停止当前补丁，运行 `Stop-QualityHook.ps1`。自启设置使用当前用户的 Windows 启动项 `UURemoteQualityHook`，移动项目文件夹后需重新启用。
 
 如果 PowerShell 阻止执行本地脚本，可仅对本次命令使用执行策略参数：
 
